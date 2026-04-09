@@ -37,7 +37,8 @@ This implementation aligns with low-duty-cycle MAC ideas (like S-MAC goals) by m
 * **Sleep window**: deep sleep immediately after transmission (sleep avoids idle listening)
 
 **Note**: `ESP.deepSleep(0)` means sleep indefinitely until reset/wake event.  
-If you want periodic wake-ups (such as for mesh network implementations), use a timed deep sleep value in ms (e.g., wake every 16.6ms to update display) and ensure `GPIO16 -> RST` is wired on board.
+If you want periodic wake-ups (such as for mesh network implementations), use a timed deep sleep value in ms.    
+(e.g., wake every 16.6ms to update display) and ensure `GPIO16 -> RST` is wired on board.
 
 ## Hardware & Pin Mapping
 
@@ -57,7 +58,7 @@ For `ESP.deepSleep(0)` wake behavior, ESP8266 wakes when `RST` is pulled LOW and
 
 * Arduino IDE 1.8+ or 2.x
 * ESP8266 board package installed
-* **Libraries**: `ESP8266WiFi`, `WiFiClientSecure`, `base64`.
+* **Libraries**: `ESP8266WiFi`, `WiFiClientSecure`, `base64`
 
 ## Possible Next Improvements
 
